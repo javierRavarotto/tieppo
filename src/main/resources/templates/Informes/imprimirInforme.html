@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="nav/nav.html :: css"></div>
+    <link  rel="stylesheet" th:href="@{../../css/informesImprimir.css}">
+	<title class="imprimir">Informe</title>
+</head>
+
+<div class="imprimir"><header class="imprimir" th:replace="nav/nav.html :: nav"> </header></div>
+
+<body>
+
+    <div class="contenedorInforme container ">
+       <div class="row justify-content-center ">
+			    	<p class="col-3 text-center legal "> INFORME DE SERVICIO TECNICO NO VALIDO COMO FACTURA</p>
+			    </div>
+	    <div class="row">
+	        <img class="col-11 logoTieppo ">
+	         
+	    </div>
+	     <div class="row">
+	         <p  class="col-6 titulos">Oficina Técnica / Comercial. Washington 1924 - Casilda (Santa Fe) </p>
+	         <p  class="col-6 text-end  datos">CUIT: 20-24859229-0 </p>
+	    </div>
+	    <div class="row">
+	         <p  class="col-6 titulos ">Teléfonos: (03464) 437633 - (03464) 15537317
+	    </div>
+	     <div class="row">
+	         <p  class="col-8  titulos">E-Mail : davidtieppo@yahoo.com.ar / climatizaciontieppo@gmail.com</p>
+	    </div>
+	    <div class="row justify-content-center">
+	    
+	    		<div class="row ">
+			    	<p class="col-3  titulos">Informe tecnico N:</p>
+			    	<p class="col-2  datos"th:text="${informe.informeTecnicoN}"> </p>
+			    </div>
+			    <div class="row ">
+			    	<p class="col-3 titulos ">Fecha :</p>
+			    	<p class="col-2   datos"  th:text="${#dates.format(informe.fechaEdit, 'DD/MM/YY')}"></p>
+			    </div>
+			     <div class="row ">
+			    	<p class="col-3 titulos ">Hora :</p>
+			    	<p class="col-2 datos"  th:text="${#dates.format(informe.fechaEdit, 'HH:mm')}"></p>
+			    </div>
+			     <div class="row ">
+			    	<p class="col-3 titulos ">Area/Sector :</p>
+			    	<p class="col-2  datos"th:text="${informe.area}"> </p>
+			    </div>
+			    <div class="row ">
+			    	<p class="col-3  titulos">Equipo Marca:</p>
+			    	<p class="col-2  datos"th:text="${informe.equipo}"> </p>
+			    </div>
+			     <div class="row ">
+			    	<p class="col-3 titulos "> Nº Serie :</p>
+			    	<p class="col-2 datos "th:text="${informe.nEquipo}"> </p>
+			    </div>
+			    <div class="row ">
+			    	<p class="col-3 titulos ">Nombre/s tecnico/s :</p>
+			    	<p class="col-2 datos "th:text="${informe.tecnicoNombre}"> </p>
+			    </div>
+			    
+			    <div class="row ">
+			    	<p class="col-3  titulos">Tarea :</p>
+			    	<p class="col-2  datos"th:text="${informe.tareas}"> </p>
+			    </div>
+			    
+			    <div class="row ">
+			    	<p class="col-3 titulos ">Descripción :</p>
+			    </div>
+			    <div class="row ">
+			    	<p class="col-12 descripcion"th:text="${informe.descripcionTareas}"> </p>
+			    </div>
+			   <div class="row ">
+			    	<p class="col-3  descripcion">Recomendacion:</p>
+			    	<p class="col-2  datos"th:text="${informe.recomendacion}"> </p>
+			    </div>
+	    <button onclick="imprimir()" class="imprimir col-3">Imprimir</button>
+    </div>
+     <script>function imprimir(){window.print()}</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+.contenedorInforme{
+	border:solid black 2px;
+	margin-top:10px;
+	margin-bottom: 10px;
+	height: 1000px;
+}
+
+h3{
+	margin:20px;
+	font-size: 23px;
+	height: 30px;
+	padding-top:10px
+	
+	
+}
+.legal{
+	margin-top:10px;
+	font-size: 17px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border:solid 1px black;
+	border-radius: 10px;
+
+}
+.descripcion{
+	font-size: 18px;
+	padding: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left:10px;
+	margin-right: 10px;
+}
+.titulos{
+	font-size: 18px;
+	padding: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left:10px;
+}
+.datos{
+	font-size: 18px;
+	padding: 2px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right:10px;
+}
+
+.contenedorDatos{
+	background-color: rgb(187, 185, 185);;
+	border:solid black 1px
+}
+.logoTieppo{
+	margin-top:15px;
+	margin-bottom: 15px;
+	height: 140px;
+	background-image: url(../logo.png);
+  	background-repeat:no-repeat;
+  	padding: 70px;	
+}
+.indice{
+	margin-top:10px;
+}
+  .imprimir{
+        margin:10px
+    }
+@media print{
+    body {-webkit-print-color-adjust: exact;}
+
+    .imprimir{
+        display: none;
+    }
+   header{
+		display: none;
+	}
+}

@@ -1,0 +1,17 @@
+.lupa{
+	width:25px;
+	height: 25px;
+	background-color: rgba(248, 240, 240, 0.5);
+	border-radius:  7px;
+	background-image: url(../lupa.png);
+  	background-repeat:no-repeat;	
+    background-size: 25px;
+	cursor: pointer;
+	border:none;
+	display: inline-flex;
+	justify-content: center;
+	position: absolute;
+}
+.buscador{
+	 text-indent: 20px;
+}
